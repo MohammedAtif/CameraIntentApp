@@ -127,6 +127,14 @@ public class CameraFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(mThumbnail != null){
+            mThumbnail.recycle();
+        }
+    }
+
     //endregion
 
     //region Private Methods
